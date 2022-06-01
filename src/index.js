@@ -8,6 +8,8 @@ const attributes = {
   style: { type: 'string', default: '' },
 }
 
+const wp = /** @type {any} */ (window).wp
+
 wp.blocks.registerBlockType('custom-blocks/menu-item', {
   title: 'Menu Item',
   icon: 'admin-page',
