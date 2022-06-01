@@ -1,19 +1,18 @@
-import edit from './components/edit.jsx';
-import save from './components/save.jsx';
+import Edit from './components/edit/Edit.jsx'
+import Save from './components/Save.jsx'
 
-
-var attributes = {
-  title: { type: 'string', },
-  price: { type: 'string', },
-  description: { type: 'string', },
-  style: { type: 'string', default: '',},
-};
+const attributes = {
+  title: { type: 'string' },
+  price: { type: 'string' },
+  description: { type: 'string' },
+  style: { type: 'string', default: '' },
+}
 
 wp.blocks.registerBlockType('custom-blocks/menu-item', {
   title: 'Menu Item',
   icon: 'admin-page',
   category: 'common',
   attributes,
-  edit,
-  save,
-});
+  edit: Edit,
+  save: Save,
+})
